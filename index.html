@@ -3,119 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
 <title>Sarthak Turkane | Portfolio</title>
+<meta name="description" content="Sarthak Turkane, CSE student at Sanjivani University and aspiring AI engineer. Web apps, Chrome extensions, explainable AI and chess.">
+<meta property="og:title" content="Sarthak Turkane | Portfolio">
+<meta property="og:description" content="Aspiring AI engineer building web apps, browser tools and intelligent systems.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FAF7F2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Sarthak Turkane","jobTitle":"Computer Science Student and Aspiring AI Engineer","alumniOf":"Sanjivani University","sameAs":["https://github.com/SARTHAK-TURKANE-81","https://www.linkedin.com/in/sarthak-turkane","https://www.chess.com/member/sarthak_turkane"]}
+</script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <style>
-:root{--bg:#FAF7F2;--card:#E8E0D5;--text:#292524;--muted:#78716C;--accent:#C76D45;--line:rgba(41,37,36,.14);--b1:#E8E0D5;--b2:#EFE8DD;--b3:#E3D8CA;--hdr:rgba(250,247,242,.88);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1917;--card:#292524;--text:#F5F0E8;--muted:#A8A29E;--accent:#D9825A;--line:rgba(245,240,232,.16);--b1:#292524;--b2:#33302d;--b3:#2a2623;--hdr:rgba(28,25,23,.88);color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#1c1917;--card:#292524;--text:#F5F0E8;--muted:#A8A29E;--accent:#D9825A;--line:rgba(245,240,232,.16);--b1:#292524;--b2:#33302d;--b3:#2a2623;--hdr:rgba(28,25,23,.88);color-scheme:dark}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+:root{--bg:#FAF7F2;--card:#E8E0D5;--text:#292524;--muted:#78716C;--accent:#C76D45;--line:rgba(41,37,36,.14);--b1:#E8E0D5;--b2:#EFE8DD;--b3:#E3D8CA;--hdr:rgba(250,247,242,.88);--soft:rgba(199,109,69,.12);--glow:0 0 0 1px rgba(199,109,69,.32),0 4px 14px rgba(199,109,69,.14);--sq-d:#cdbfae;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1917;--card:#292524;--text:#F5F0E8;--muted:#A8A29E;--accent:#D9825A;--line:rgba(245,240,232,.16);--b1:#292524;--b2:#33302d;--b3:#2a2623;--hdr:rgba(28,25,23,.88);--soft:rgba(217,130,90,.16);--glow:0 0 0 1px rgba(217,130,90,.38),0 4px 14px rgba(217,130,90,.16);--sq-d:#4a423d;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1c1917;--card:#292524;--text:#F5F0E8;--muted:#A8A29E;--accent:#D9825A;--line:rgba(245,240,232,.16);--b1:#292524;--b2:#33302d;--b3:#2a2623;--hdr:rgba(28,25,23,.88);--soft:rgba(217,130,90,.16);--glow:0 0 0 1px rgba(217,130,90,.38),0 4px 14px rgba(217,130,90,.16);--sq-d:#4a423d;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);-webkit-text-size-adjust:100%}
 *{box-sizing:border-box;margin:0}
-body{font-family:Poppins,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+body{font-family:Poppins,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;transition:background .4s,color .4s}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hdr);z-index:10}
+img{max-width:100%}
+.skip{position:absolute;left:-999px;top:8px;z-index:30;background:var(--accent);color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none}
+.skip:focus{left:12px}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:40}
 .blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.75;z-index:-1;animation:float 14s ease-in-out infinite}
 .blob.a{width:340px;height:340px;background:var(--b1);top:-60px;left:-80px}
 .blob.b{width:300px;height:300px;background:var(--b2);top:35%;right:-90px;animation-delay:-5s}
 .blob.c{width:320px;height:320px;background:var(--b3);bottom:-80px;left:20%;animation-delay:-9s}
 @keyframes float{50%{transform:translate(30px,-40px) scale(1.1)}}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--hdr);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-nav{max-width:1000px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.logo{font-weight:700;color:var(--text);text-decoration:none}
-.links{display:flex;gap:16px;overflow-x:auto}
-.links a{color:var(--muted);text-decoration:none;font-size:.88rem;white-space:nowrap;transition:.3s}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--hdr);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{max-width:1160px;margin:auto;padding:8px 16px;display:flex;align-items:center;gap:10px}
+.logo{font-weight:700;color:var(--text);text-decoration:none;white-space:nowrap;flex:none}
+.logo::after{content:".";color:var(--accent)}
+.links{flex:1;min-width:0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;align-items:center;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 14px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 14px),transparent 100%);padding:0 10px}
+.links::-webkit-scrollbar{display:none}
+.links a:first-child{margin-left:auto}
+.links a{color:var(--muted);text-decoration:none;font-size:.86rem;white-space:nowrap;transition:color .3s,border-color .3s,background .3s;padding:6px 12px;border-radius:20px;border:1px solid transparent}
 .links a:hover{color:var(--accent)}
-section,.hero{max-width:1000px;margin:auto;padding:70px 20px 20px}
-.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center;min-height:80vh}
-.tag{display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:30px;font-size:.8rem;color:var(--accent);background:var(--card);animation:pulse 3s infinite}
-@keyframes pulse{50%{box-shadow:0 6px 18px var(--b2)}}
-h1{font-size:clamp(2.1rem,6vw,3.5rem);line-height:1.15;margin:16px 0 8px}
+.links a.on{color:var(--accent);border-color:var(--accent);background:var(--card)}
+#themeBtn{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--accent);font-size:1rem;cursor:pointer;transition:.3s;line-height:1}
+#themeBtn:hover{border-color:var(--accent)}
+section,.hero{max-width:1160px;margin:auto;padding:72px 20px 16px}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;min-height:min(80vh,720px)}
+h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.15;margin:0 0 8px}
 .grad{color:var(--text);background:linear-gradient(var(--accent),var(--accent)) no-repeat 0 92%/0 3px;animation:uline 1.2s .5s ease forwards}
-@keyframes shine{to{background-position:200% 0}}
+@keyframes uline{to{background-size:100% 3px}}
 .role{font-size:1.2rem;color:var(--muted);min-height:2em}
 .role b{color:var(--accent);font-weight:600}
 .role i{display:inline-block;width:2px;height:1.1em;background:var(--accent);vertical-align:middle;margin-left:3px;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
-.hero p.lead{margin:14px 0 24px;color:var(--muted);max-width:520px}
-.btn{display:inline-block;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:500;margin:0 10px 10px 0;transition:.3s;border:1px solid var(--accent)}
-.btn.p{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(199,109,69,.3)}
+.hero p.lead{margin:14px 0 24px;color:var(--muted);max-width:540px}
+.btn{display:inline-block;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:500;margin:0 10px 10px 0;transition:.3s;border:1px solid var(--accent);font-family:inherit;font-size:.95rem;cursor:pointer;line-height:1.4}
+.btn.p{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(199,109,69,.22)}
 .btn.s{color:var(--accent);background:var(--card)}
-.btn:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(199,109,69,.3)}
-.avatar{width:min(260px,70vw);aspect-ratio:1;margin:auto;border-radius:50%;overflow:hidden;border:4px solid var(--card);box-shadow:0 14px 40px rgba(41,37,36,.18);animation:bob 6s ease-in-out infinite}.avatar img{width:100%;height:100%;object-fit:cover;display:block}
-@keyframes bob{50%{transform:translateY(-14px)}}
+.ring{position:relative;width:min(290px,70vw);aspect-ratio:1;margin:auto;border-radius:50%;padding:5px;overflow:hidden;animation:bob 6s ease-in-out infinite}
+.ring::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,var(--accent),transparent 30%,var(--accent) 55%,transparent 80%,var(--accent));animation:spin 9s linear infinite;opacity:.8}
+.avatar{position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;border:5px solid var(--bg);background:var(--card)}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes bob{50%{transform:translateY(-12px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.socials a{font-size:.82rem;color:var(--muted);text-decoration:none;padding:6px 14px;border:1px solid var(--line);border-radius:20px;background:var(--card);transition:.3s}
+.socials a:hover{color:var(--accent);border-color:var(--accent)}
 h2{font-size:1.7rem;margin-bottom:22px}
 h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;margin-top:6px;background:var(--accent)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;backdrop-filter:blur(10px);transition:.35s;box-shadow:0 6px 20px rgba(41,37,36,.08)}
-.card:hover{transform:translateY(-6px);box-shadow:0 14px 32px rgba(41,37,36,.14);border-color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .35s,box-shadow .35s,border-color .35s;box-shadow:0 6px 20px rgba(41,37,36,.08)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
 .card h3{margin-bottom:8px;font-size:1.1rem}
 .card p,.card li{color:var(--muted);font-size:.93rem}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.chip{padding:7px 15px;border-radius:30px;font-size:.84rem;background:var(--card);border:1px solid var(--line);color:var(--text);transition:.3s}
-.chip:hover{color:var(--text);box-shadow:0 6px 14px rgba(41,37,36,.14);transform:scale(1.07)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px;margin-top:22px}
-.stat{text-align:center;padding:18px 10px}
-.stat strong{display:block;font-size:2rem;color:var(--text)}
+.chip{padding:7px 15px;border-radius:30px;font-size:.84rem;background:var(--bg);border:1px solid var(--line);color:var(--text);transition:.3s}
+.skillgrp{margin-top:18px}
+.skillgrp small{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.skillgrp .chips{margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}
+.stat{text-align:center;padding:18px 10px;background:var(--bg)}
+.stat strong{display:block;font-size:2rem;color:var(--text);line-height:1.2}
 .stat span{font-size:.82rem;color:var(--muted)}
-.feat ul{padding-left:18px;margin-top:10px}
+.live{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;color:var(--muted);margin-top:12px}
+.live::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--muted)}
+.live.ok::before{background:var(--accent)}
+.jgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.jc{display:flex;flex-direction:column;gap:8px;padding:22px 22px 20px 26px;overflow:hidden}
+.jc::before{content:"";position:absolute;left:0;top:20px;bottom:20px;width:3px;border-radius:0 3px 3px 0;background:var(--accent)}
+.jtop{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.jdate{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.jtag{font-size:.72rem;padding:3px 11px;border:1px solid var(--line);border-radius:20px;background:var(--bg);color:var(--muted)}
+.jstat{font-size:.68rem;padding:2px 9px;border:1px solid var(--accent);border-radius:20px;color:var(--accent);background:var(--soft);margin-left:6px}
+.jc h3{margin:2px 0 0;font-size:1.05rem;line-height:1.35}
+.jc p{flex:1}
+.jlink{align-self:flex-start;font-size:.82rem;color:var(--accent);text-decoration:none;font-weight:500;margin-top:4px;padding:4px 0}
+.jlink:hover{text-decoration:underline}
+.jidx{position:absolute;right:16px;bottom:6px;font-size:3.2rem;font-weight:700;line-height:1;color:var(--text);opacity:.06;pointer-events:none}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:10px 36px;align-items:start}
+.feat ul{padding-left:18px;margin-top:2px}
 .feat li{margin-bottom:6px}
-.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px;font-size:.82rem}
-.flow span{padding:6px 12px;border-radius:12px;background:var(--b1);color:var(--text)}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px;font-size:.82rem}
+.flow span{padding:6px 12px;border-radius:12px;background:var(--bg);border:1px solid var(--line);color:var(--text)}
 .flow em{color:var(--accent);font-style:normal;animation:nudge 1.6s infinite}
 @keyframes nudge{50%{transform:translateX(4px)}}
-.stage{perspective:650px;height:200px;margin:0 auto 10px;display:grid;place-items:center}.board{display:grid;grid-template-columns:repeat(8,1fr);width:150px;aspect-ratio:1;position:relative;background:var(--bg);border:3px solid var(--text);border-radius:6px;transform:rotateX(55deg) rotateZ(-40deg);transform-style:preserve-3d;box-shadow:6px 6px 0 rgba(41,37,36,.35),14px 18px 26px rgba(41,37,36,.22)}
-.s{background:var(--bg)}.s.d{background:var(--muted);opacity:.45}.dot{position:absolute;width:12.5%;height:12.5%;left:calc(var(--x)*12.5%);top:calc(var(--y)*12.5%);display:grid;place-items:center}.dot::after{content:"";width:42%;height:42%;border-radius:50%;background:var(--accent);animation:ping 2s ease-in-out infinite}@keyframes ping{50%{transform:scale(1.6);opacity:.45}}
-.knight{position:absolute;left:0;top:0;width:12.5%;height:12.5%;transform-style:preserve-3d;animation:route 9s ease-in-out infinite}.knight span{position:absolute;left:50%;bottom:25%;font-size:2.9rem;line-height:1;color:var(--text);font-family:"Segoe UI Symbol","Noto Sans Symbols 2","DejaVu Sans",serif;transform-origin:50% 100%;transform:translateX(-50%) rotateZ(40deg) rotateX(-55deg)}
-@keyframes route{0%,18%{transform:translate(100%,700%)}25%,43%{transform:translate(200%,500%)}50%,68%{transform:translate(400%,400%)}75%,93%{transform:translate(300%,600%)}100%{transform:translate(100%,700%)}}
-.repo{display:block;text-decoration:none;color:inherit}.repo h3{color:var(--text);word-break:break-word}.lang{display:inline-block;margin-top:10px;padding:3px 12px;border-radius:20px;font-size:.75rem;border:1px solid var(--line);color:var(--text);background:var(--b1)}
-.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s}
+.filters{display:flex;gap:8px;margin-bottom:20px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filters button{flex:none;font-family:inherit;font-size:.82rem;padding:8px 18px;border-radius:30px;border:1px solid var(--line);background:var(--card);color:var(--muted);cursor:pointer;transition:.3s}
+.filters button.on{color:var(--accent);border-color:var(--accent);background:var(--soft)}
+.repo{display:block;text-decoration:none;color:inherit}
+.repo h3{color:var(--text);word-break:break-word}
+.repo:hover h3{color:var(--accent)}
+.repo.hide{display:none}
+.lang{display:inline-block;margin-top:10px;padding:3px 12px;border-radius:20px;font-size:.75rem;border:1px solid var(--line);color:var(--text);background:var(--bg)}
+.chessrow{display:grid;grid-template-columns:minmax(0,400px) 1fr;gap:36px;align-items:center}
+.boardwrap{width:100%;max-width:400px;margin:auto}
+.cbox{position:relative;width:100%;aspect-ratio:1;container-type:inline-size;border:3px solid var(--text);border-radius:8px;overflow:hidden;box-shadow:0 10px 28px rgba(41,37,36,.2)}
+.board{position:absolute;inset:0;display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(8,1fr)}
+.sq{position:relative;background:var(--bg)}
+.sq.d{background:var(--sq-d)}
+.sq.v::after{content:"";position:absolute;inset:0;background:var(--accent);opacity:.2}
+.sq i{position:absolute;font-style:normal;font-size:2.7cqw;line-height:1;color:var(--muted);font-weight:600;z-index:1}
+.sq i.f{right:5%;bottom:4%}
+.sq i.r{left:5%;top:4%}
+.trail{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.trail path{fill:none;stroke:var(--accent);stroke-width:.14;stroke-linecap:round;stroke-linejoin:round;opacity:0;stroke-dasharray:1;stroke-dashoffset:1}
+.kn{position:absolute;left:0;top:0;width:12.5%;height:12.5%;display:grid;place-items:center;will-change:transform;pointer-events:none}
+.hop{display:grid;place-items:center;filter:drop-shadow(0 .8cqw .6cqw rgba(41,37,36,.3))}
+.hop span{font-size:10.4cqw;line-height:1;color:var(--text);font-family:"Segoe UI Symbol","Noto Sans Symbols 2","DejaVu Sans",serif;text-shadow:0 0 .4cqw var(--bg)}
+.bstat{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;font-size:.78rem;color:var(--muted)}
+.bstat button{font-family:inherit;font-size:.76rem;padding:6px 14px;border-radius:20px;border:1px solid var(--line);background:var(--bg);color:var(--accent);cursor:pointer}
+.elo{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:14px 0 4px}
+.elo b{font-size:clamp(2.4rem,8vw,3.4rem);line-height:1;color:var(--accent)}
+.elo span{font-size:.82rem;color:var(--muted)}
+.elo b.none{font-size:1.5rem;color:var(--muted);font-weight:600}
+.cstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px;margin:14px 0}
+.cs{padding:12px;border-radius:14px;background:var(--bg);border:1px solid var(--line);text-align:center}
+.cs small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.cs b{display:block;font-size:1.25rem;color:var(--text)}
+.cs em{font-style:normal;font-size:.72rem;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:22px 0}
+.ci{display:block;padding:16px 18px;border-radius:16px;background:var(--bg);border:1px solid var(--line);text-decoration:none;color:var(--text);transition:.3s;overflow-wrap:anywhere}
+.ci small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
+.ci span{font-weight:500}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
 .reveal.in{opacity:1;transform:none}
 footer{text-align:center;padding:50px 20px 30px;color:var(--muted);font-size:.85rem}
-@media (max-width:760px){.hero{grid-template-columns:1fr;text-align:center;min-height:auto;padding-top:40px}.hero p.lead{margin-inline:auto}.avatar{order:-1;font-size:3rem}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
-.chip,.card .card,.lang,.flow span{background:var(--bg)}.repo:hover h3{color:var(--accent)}@keyframes uline{to{background-size:100% 3px}}a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:22px 0}.ci{display:block;padding:16px 18px;border-radius:16px;background:var(--bg);border:1px solid var(--line);text-decoration:none;color:var(--text);transition:.3s;overflow-wrap:anywhere}.ci small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}.ci span{font-weight:500}.ci:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-3px)}
-@media (min-width:1100px){section,.hero,nav{max-width:1120px}.hero{gap:60px}h1{font-size:4rem}.avatar{width:320px}}
-@media (max-width:480px){section,.hero{padding-left:16px;padding-right:16px}.card{padding:18px}.btn{padding:11px 20px}.stage{height:180px}h2{font-size:1.5rem}}
+#top-btn{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:48px;height:48px;padding:0;display:grid;place-items:center;border:0;border-radius:50%;background:var(--card);box-shadow:0 6px 18px rgba(41,37,36,.2);cursor:pointer;opacity:0;transform:translateY(14px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s,box-shadow .3s;z-index:20;-webkit-tap-highlight-color:transparent}
+#top-btn.show{opacity:1;transform:none;pointer-events:auto}
+#top-btn:active{transform:scale(.94)}
+#top-btn .pr{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+#top-btn .pr circle{fill:none;stroke-width:2.5}
+#top-btn .pr .bg{stroke:var(--line)}
+#top-btn .pr .fg{stroke:var(--accent);stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+#top-btn .ar{position:relative;width:20px;height:20px;fill:none;stroke:var(--accent);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (hover:hover){
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(41,37,36,.13);border-color:var(--accent)}
+.btn:hover{transform:translateY(-3px);box-shadow:var(--glow)}
+.chip:hover,.ci:hover,#themeBtn:hover{border-color:var(--accent)}
+#top-btn.show:hover{box-shadow:var(--glow),0 6px 18px rgba(41,37,36,.2)}
+#top-btn:hover .ar{transform:translateY(-2px)}
+.ci:hover{color:var(--accent);transform:translateY(-2px)}
+.filters button:hover{color:var(--accent);border-color:var(--accent)}
+}
+@media (min-width:1200px){h1{font-size:4rem}.ring{width:340px}.hero{gap:60px}section{padding-top:84px}}
+@media (max-width:980px){.jgrid{grid-template-columns:repeat(2,1fr)}.feat{grid-template-columns:1fr}.chessrow{grid-template-columns:1fr;gap:24px}.boardwrap{max-width:380px}}
+@media (max-width:760px){.hero{grid-template-columns:1fr;text-align:center;min-height:auto;padding-top:36px;gap:24px}.hero p.lead{margin-inline:auto}.ring{order:-1;width:min(230px,62vw)}.socials{justify-content:center}.logo{font-size:.95rem}.links a{padding:6px 10px;font-size:.82rem}}
+@media (max-width:640px){.jgrid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.stats .stat:last-child{grid-column:1/-1}.grid{grid-template-columns:1fr}section{padding-top:56px}h2{font-size:1.5rem}}
+@media (max-width:480px){section,.hero{padding-left:16px;padding-right:16px}.card{padding:18px}.jc{padding:18px 18px 16px 22px}.btn{padding:11px 20px}.chips .btn{flex:1 1 auto;text-align:center}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.grad{background-size:100% 3px}}
 </style>
 </head>
 <body>
+<a class="skip" href="#about">Skip to content</a>
+<div id="bar"></div>
 <div class="blob a"></div><div class="blob b"></div><div class="blob c"></div>
 <header><nav><a class="logo" href="#top">Sarthak</a>
-<div class="links"><a href="#about">About</a><a href="#project">Project</a><a href="#repos">Repos</a><a href="#lead">Leadership</a><a href="#contact">Contact</a></div></nav></header>
+<div class="links" id="links"><a href="#about">About</a><a href="#journey">Journey</a><a href="#project">Project</a><a href="#repos">Repos</a><a href="#chess">Chess</a><a href="#lead">Leadership</a><a href="#contact">Contact</a></div>
+<button id="themeBtn" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">&#9680;</button></nav></header>
 
 <main id="top">
 <div class="hero">
 <div>
-<span class="tag">Open to opportunities</span>
 <h1>Hi, I’m <span class="grad">Sarthak Turkane</span></h1>
-<div class="role"><b id="typed"></b><i></i></div>
-<p class="lead">CSE student at Sanjivani University who loves building web apps and intelligent tools, with the goal of becoming a software developer.</p>
+<div class="role" aria-live="off"><b id="typed"></b><i></i></div>
+<p class="lead">CSE student at Sanjivani University and aspiring AI engineer who loves building web apps, browser tools and intelligent systems that solve real problems.</p>
 <a class="btn p" href="#project">View my work</a><a class="btn s" href="#contact">Get in touch</a>
+<div class="socials"><a href="https://github.com/SARTHAK-TURKANE-81" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/sarthak-turkane" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.chess.com/member/sarthak_turkane" target="_blank" rel="noopener">Chess.com</a></div>
 </div>
-<div class="avatar"><img src="data:image/webp;base64,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" alt="Portrait of Sarthak Turkane" width="260" height="260"></div>
+<div class="ring"><div class="avatar"><img src="data:image/webp;base64,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" alt="Portrait of Sarthak Turkane" width="260" height="260"></div></div>
 </div>
 
 <section id="about" class="reveal">
 <h2>About me</h2>
 <div class="card">
 <p>I am Sarthak Aarti Suresh Turkane, a Computer Science and Engineering student at Sanjivani University in Maharashtra, India. I enjoy turning ideas into working web apps and browser tools, and I am especially curious about AI, automation and software that solves real problems.</p>
-<div class="chips">
-<span class="chip">JavaScript</span><span class="chip">HTML and CSS</span><span class="chip">Web Apps</span><span class="chip">Chrome Extensions (MV3)</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">C</span><span class="chip">Explainable AI</span><span class="chip">LLM APIs</span><span class="chip">REST APIs</span><span class="chip">Git and GitHub</span><span class="chip">Team Leadership</span>
-</div>
+<div class="skillgrp"><small>Languages</small><div class="chips"><span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">C</span><span class="chip">HTML and CSS</span></div></div>
+<div class="skillgrp"><small>Build</small><div class="chips"><span class="chip">Web Apps</span><span class="chip">Chrome Extensions (MV3)</span><span class="chip">REST APIs</span><span class="chip">Git and GitHub</span></div></div>
+<div class="skillgrp"><small>AI</small><div class="chips"><span class="chip">Explainable AI</span><span class="chip">LLM APIs</span></div></div>
+<div class="skillgrp"><small>People</small><div class="chips"><span class="chip">Team Leadership</span></div></div>
 <div class="stats">
-<div class="card stat"><strong data-n="17">0</strong><span>Repositories</span></div>
+<div class="card stat"><strong id="sRepos" data-n="17">0</strong><span>Repositories</span></div>
 <div class="card stat"><strong data-n="85">0</strong><span>Commits on Lens⁸¹</span></div>
-<div class="card stat"><strong data-n="9">0</strong><span>Stars</span></div>
-<div class="card stat"><strong data-n="6">0</strong><span>Forks</span></div>
+<div class="card stat"><strong id="sStars" data-n="9">0</strong><span>Stars</span></div>
+<div class="card stat"><strong id="sForks" data-n="6">0</strong><span>Forks</span></div>
+<div class="card stat"><strong id="sFol" data-n="4">0</strong><span>Followers</span></div>
 </div>
+<span class="live" id="ghLive">GitHub stats: saved snapshot</span>
+</div>
+</section>
+
+<section id="journey" class="reveal">
+<h2>Journey</h2>
+<div class="jgrid">
+<article class="card jc"><div class="jtop"><span class="jdate">2026</span><span class="jtag">Internship</span></div><h3>Summer Internship at Tinkerers’ Lab</h3><p>Four weeks at the Sanjivani University lab, documenting daily learning, builds and experiments in a public progress tracker.</p><a class="jlink" href="https://github.com/SARTHAK-TURKANE-81/TL_Intern_Sarthak_Turkane" target="_blank" rel="noopener">Open tracker</a><span class="jidx" aria-hidden="true">01</span></article>
+<article class="card jc"><div class="jtop"><span class="jdate">2026</span><span class="jtag">Project</span></div><h3>Shipped Lens⁸¹ Smart Extension</h3><p>Led a team of four through six versions of a Chrome MV3 extension that classifies Scholar results and builds citations.</p><a class="jlink" href="https://github.com/SARTHAK-TURKANE-81/Lens81_Smart_Extension" target="_blank" rel="noopener">View project</a><span class="jidx" aria-hidden="true">02</span></article>
+<article class="card jc"><div class="jtop"><span class="jdate">2026</span><span class="jtag">Hackathon</span></div><h3>Smart India Hackathon 2026</h3><p>Built project work for SIH26, alongside explainable AI work on GI-Vision for endoscopy image classification.</p><a class="jlink" href="https://github.com/SARTHAK-TURKANE-81/SIH26" target="_blank" rel="noopener">View repo</a><span class="jidx" aria-hidden="true">03</span></article>
+<article class="card jc"><div class="jtop"><span class="jdate">May 2026</span><span class="jtag">Chess</span></div><h3>Joined Chess.com</h3><p>Started playing online as Sarthak_Turkane, alongside chess projects like SP-Chess-Project and CHESS_GLASSES.</p><a class="jlink" href="https://www.chess.com/member/sarthak_turkane" target="_blank" rel="noopener">Open profile</a><span class="jidx" aria-hidden="true">04</span></article>
+<article class="card jc"><div class="jtop"><span class="jdate">Ongoing<span class="jstat">Active</span></span><span class="jtag">Leadership</span></div><h3>President, SIBSA</h3><p>Coordinating members and activities for the College Department Committee at Sanjivani University.</p><span class="jidx" aria-hidden="true">05</span></article>
+<article class="card jc"><div class="jtop"><span class="jdate">Now<span class="jstat">Current</span></span><span class="jtag">Education</span></div><h3>B.Tech, Computer Science and Engineering</h3><p>Studying at Sanjivani University while building web apps, AI tools and chess projects on the side.</p><span class="jidx" aria-hidden="true">06</span></article>
 </div>
 </section>
 
 <section id="project" class="reveal">
 <h2>Featured project</h2>
 <div class="card feat">
+<div>
 <h3>Lens⁸¹ Smart Extension</h3>
 <p>A Chrome Manifest V3 extension that tells you whether a Google Scholar result is a Research Paper or a Review Paper, and turns any highlighted text into a formatted citation, without leaving the page. Everything runs client side, with no server and no hosted database.</p>
+<div class="chips" style="margin-top:20px">
+<a class="btn p" style="margin:0" href="https://github.com/SARTHAK-TURKANE-81/Lens81_Smart_Extension" target="_blank" rel="noopener">View on GitHub</a>
+<a class="btn s" style="margin:0" href="https://youtu.be/I_N_ybBbkhQ" target="_blank" rel="noopener">Watch demo</a>
+</div>
+</div>
+<div>
 <ul>
 <li>Research and Review badges with an ensemble of up to 5 AI models (OpenRouter, Google Gemini, xAI Grok)</li>
 <li>Local Collections with export to CSV, XLSX, JSON, BibTeX, Markdown and CSL</li>
@@ -124,38 +244,70 @@ footer{text-align:center;padding:50px 20px 30px;color:var(--muted);font-size:.85
 <li>Six versions shipped, built with a team of four</li>
 </ul>
 <div class="flow"><span>Scholar page</span><em>→</em><span>Content script</span><em>→</em><span>Service worker</span><em>→</em><span>APIs and storage</span></div>
-<div class="chips" style="margin-top:20px">
-<a class="btn p" style="margin:0" href="https://github.com/SARTHAK-TURKANE-81/Lens81_Smart_Extension" target="_blank" rel="noopener">View on GitHub</a>
-<a class="btn s" style="margin:0" href="https://youtu.be/I_N_ybBbkhQ" target="_blank" rel="noopener">Watch demo</a>
+</div>
+<div style="grid-column:1/-1;margin-top:8px">
+<div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--bg)">
+<iframe src="https://www.youtube-nocookie.com/embed/I_N_ybBbkhQ" title="Lens81 Smart Extension demo" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
 </div>
 </div>
 </section>
 
 <section id="repos" class="reveal">
 <h2>More from GitHub</h2>
-<div class="grid">
-<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/TL_Intern_Sarthak_Turkane" target="_blank" rel="noopener"><h3>TL_Intern_Sarthak_Turkane</h3><p>Summer Internship Program 2026 at Tinkerers’ Lab, Sanjivani University. A 4-week progress tracker documenting daily learning, project development and experiments.</p><span class="lang">HTML</span></a>
-<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/GI-Vision" target="_blank" rel="noopener"><h3>GI-Vision</h3><p>Explainable AI for four-class gastrointestinal endoscopy image classification using ResNet-18 and Grad-CAM.</p><span class="lang">Python</span></a>
-<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/SP-Chess-Project" target="_blank" rel="noopener"><h3>SP-Chess-Project</h3><p>A chess focused project that blends my favourite hobby with programming.</p><span class="lang">Python</span></a>
-<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/CHESS_GLASSES" target="_blank" rel="noopener"><h3>CHESS_GLASSES</h3><p>Another chess experiment built in Python.</p><span class="lang">Python</span></a>
-<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/knowledge-container-ai" target="_blank" rel="noopener"><h3>knowledge-container-ai</h3><p>An AI powered knowledge project built with TypeScript.</p><span class="lang">TypeScript</span></a>
-<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/STUDENT-EXIBIT" target="_blank" rel="noopener"><h3>STUDENT-EXIBIT</h3><p>A student showcase platform, built by me for us.</p><span class="lang">TypeScript</span></a>
-<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/SIH26" target="_blank" rel="noopener"><h3>SIH26</h3><p>My Smart India Hackathon 2026 project work.</p><span class="lang">JavaScript</span></a>
-<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/green-sentinel-tracker" target="_blank" rel="noopener"><h3>green-sentinel-tracker</h3><p>ADP project for division B.</p><span class="lang">Project</span></a>
-<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/ky-mira-backend" target="_blank" rel="noopener"><h3>ky-mira-backend</h3><p>The backend of one of my projects.</p><span class="lang">Python</span></a>
-<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/TEXT-TO-HANDWRITING" target="_blank" rel="noopener"><h3>TEXT-TO-HANDWRITING</h3><p>Converts typed text into a handwritten style.</p><span class="lang">HTML</span></a>
-<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/CONNECT" target="_blank" rel="noopener"><h3>CONNECT</h3><p>A web app built with HTML, CSS and JavaScript.</p><span class="lang">HTML</span></a>
-<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/os-tutorial" target="_blank" rel="noopener"><h3>os-tutorial</h3><p>A fork exploring how to create an operating system from scratch.</p><span class="lang">C</span></a>
+<div class="filters" id="filters" role="group" aria-label="Filter repositories by language">
+<button type="button" class="on" data-f="all">All</button><button type="button" data-f="Python">Python</button><button type="button" data-f="JavaScript">JavaScript</button><button type="button" data-f="TypeScript">TypeScript</button><button type="button" data-f="HTML">HTML</button><button type="button" data-f="C">C</button>
+</div>
+<div class="grid" id="repoGrid">
+<a class="card repo" data-l="HTML" href="https://github.com/SARTHAK-TURKANE-81/TL_Intern_Sarthak_Turkane" target="_blank" rel="noopener"><h3>TL_Intern_Sarthak_Turkane</h3><p>Summer Internship Program 2026 at Tinkerers’ Lab, Sanjivani University. A 4-week progress tracker documenting daily learning, project development and experiments.</p><span class="lang">HTML</span></a>
+<a class="card repo" data-l="Python" href="https://github.com/SARTHAK-TURKANE-81/GI-Vision" target="_blank" rel="noopener"><h3>GI-Vision</h3><p>Explainable AI for four-class gastrointestinal endoscopy image classification using ResNet-18 and Grad-CAM.</p><span class="lang">Python</span></a>
+<a class="card repo" data-l="Python" href="https://github.com/SARTHAK-TURKANE-81/SP-Chess-Project" target="_blank" rel="noopener"><h3>SP-Chess-Project</h3><p>A chess focused project that blends my favourite hobby with programming.</p><span class="lang">Python</span></a>
+<a class="card repo" data-l="Python" href="https://github.com/SARTHAK-TURKANE-81/CHESS_GLASSES" target="_blank" rel="noopener"><h3>CHESS_GLASSES</h3><p>Another chess experiment built in Python.</p><span class="lang">Python</span></a>
+<a class="card repo" data-l="TypeScript" href="https://github.com/SARTHAK-TURKANE-81/knowledge-container-ai" target="_blank" rel="noopener"><h3>knowledge-container-ai</h3><p>An AI powered knowledge project built with TypeScript.</p><span class="lang">TypeScript</span></a>
+<a class="card repo" data-l="TypeScript" href="https://github.com/SARTHAK-TURKANE-81/STUDENT-EXIBIT" target="_blank" rel="noopener"><h3>STUDENT-EXIBIT</h3><p>A student showcase platform, built by me for us.</p><span class="lang">TypeScript</span></a>
+<a class="card repo" data-l="JavaScript" href="https://github.com/SARTHAK-TURKANE-81/SIH26" target="_blank" rel="noopener"><h3>SIH26</h3><p>My Smart India Hackathon 2026 project work.</p><span class="lang">JavaScript</span></a>
+<a class="card repo" data-l="Project" href="https://github.com/SARTHAK-TURKANE-81/green-sentinel-tracker" target="_blank" rel="noopener"><h3>green-sentinel-tracker</h3><p>ADP project for division B.</p><span class="lang">Project</span></a>
+<a class="card repo" data-l="Python" href="https://github.com/SARTHAK-TURKANE-81/ky-mira-backend" target="_blank" rel="noopener"><h3>ky-mira-backend</h3><p>The backend of one of my projects.</p><span class="lang">Python</span></a>
+<a class="card repo" data-l="HTML" href="https://github.com/SARTHAK-TURKANE-81/TEXT-TO-HANDWRITING" target="_blank" rel="noopener"><h3>TEXT-TO-HANDWRITING</h3><p>Converts typed text into a handwritten style.</p><span class="lang">HTML</span></a>
+<a class="card repo" data-l="HTML" href="https://github.com/SARTHAK-TURKANE-81/CONNECT" target="_blank" rel="noopener"><h3>CONNECT</h3><p>A web app built with HTML, CSS and JavaScript.</p><span class="lang">HTML</span></a>
+<a class="card repo" data-l="C" href="https://github.com/SARTHAK-TURKANE-81/os-tutorial" target="_blank" rel="noopener"><h3>os-tutorial</h3><p>A fork exploring how to create an operating system from scratch.</p><span class="lang">C</span></a>
 </div>
 <p style="margin-top:20px"><a class="btn s" style="margin:0" href="https://github.com/SARTHAK-TURKANE-81?tab=repositories" target="_blank" rel="noopener">See all 17 repositories</a></p>
 </section>
 
+<section id="chess" class="reveal">
+<h2>Chess</h2>
+<div class="card">
+<div class="chessrow">
+<div class="boardwrap">
+<div class="cbox" id="cbox" role="img" aria-label="Chessboard with a knight making legal moves until it has visited every square">
+<div class="board" id="board"></div>
+<svg class="trail" viewBox="0 0 8 8" aria-hidden="true"><path id="trail" pathLength="1" d="M0 0"/></svg>
+<div class="kn" id="kn"><div class="hop" id="hop"><span>&#9822;&#xFE0E;</span></div></div>
+</div>
+<div class="bstat"><span id="cstat">Knight tour, move 0 of 64</span><button type="button" id="pauseBtn" aria-pressed="false">Pause</button></div>
+</div>
+<div>
+<h3>Sarthak_Turkane on Chess.com</h3>
+<div class="elo" id="eloMain"><b id="eloNum" class="none">…</b><span id="eloLbl">Loading rating from Chess.com</span></div>
+<div class="cstats" id="cstats">
+<div class="cs"><small>Platform</small><b>Chess.com</b></div>
+<div class="cs"><small>Joined</small><b>May 2026</b></div>
+</div>
+<span class="live" id="chLive">Connecting to Chess.com…</span>
+<p style="margin-top:12px">Chess sharpens my planning and patience, the same habits I bring to debugging and designing software. The knight on the board is touring all 64 squares using only legal moves.</p>
+<div class="chips" style="margin-top:14px"><a class="btn s" style="margin:0" href="https://www.chess.com/member/sarthak_turkane" target="_blank" rel="noopener">Challenge me</a></div>
+</div>
+</div>
+</div>
+</section>
+
 <section id="lead" class="reveal">
-<h2>Leadership and hobbies</h2>
+<h2>Leadership and goals</h2>
 <div class="grid">
 <div class="card"><h3>President, SIBSA</h3><p>I lead SIBSA, the College Department Committee at Sanjivani University, coordinating members and activities and growing a student community.</p></div>
-<div class="card"><h3>Chess</h3><div class="stage"><div class="board" id="board"><i class="dot" style="--x:2;--y:5"></i><i class="dot" style="--x:4;--y:4"></i><i class="dot" style="--x:3;--y:6"></i><div class="knight"><span>&#9822;&#xFE0E;</span></div></div></div><p>Chess sharpens my planning and patience, the same habits I bring to debugging and designing software. It also shows up in my code, with projects like SP-Chess-Project and CHESS_GLASSES.</p></div>
-<div class="card"><h3>Goal</h3><p>To grow into a software developer who builds useful, polished products, and to keep exploring AI engineering along the way.</p></div>
+<div class="card"><h3>Independent developer</h3><p>I build and ship on my own too, from browser tools to AI projects, and keep my work public on GitHub.</p></div>
+<div class="card"><h3>Goal</h3><p>To grow into a software developer and AI engineer who builds useful, polished products, and to keep exploring intelligent systems and automation along the way.</p></div>
 </div>
 </section>
 
@@ -169,27 +321,139 @@ footer{text-align:center;padding:50px 20px 30px;color:var(--muted);font-size:.85
 </div>
 <div class="chips" style="justify-content:center">
 <a class="btn p" style="margin:0" href="mailto:sarthakturkane81@gmail.com">Email me</a>
+<button class="btn s" style="margin:0" type="button" id="copyMail">Copy email</button>
 <a class="btn s" style="margin:0" href="https://github.com/SARTHAK-TURKANE-81" target="_blank" rel="noopener">GitHub</a>
 <a class="btn s" style="margin:0" href="https://www.linkedin.com/in/sarthak-turkane" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn s" style="margin:0" href="https://www.chess.com/member/sarthak_turkane" target="_blank" rel="noopener">Chess.com</a>
 </div>
 </div>
 </section>
 </main>
 <footer>Designed and built by Sarthak Turkane <span id="yr"></span></footer>
+<button id="top-btn" type="button" aria-label="Back to top" title="Back to top"><svg class="pr" viewBox="0 0 48 48" aria-hidden="true"><circle class="bg" cx="24" cy="24" r="21"/><circle class="fg" id="topRing" cx="24" cy="24" r="21" pathLength="1"/></svg><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script>
 (function(){
-var roles=["CSE Student","Aspiring Software Developer","Web App Builder","AI Enthusiast","Chess Player"],r=0,c=0,del=false,t=document.getElementById("typed");
+var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+/* ELO: put your numbers here (or leave null and let Chess.com load them live) */
+var MY_ELO={rapid:null,blitz:null,bullet:null,daily:null};
+
+/* typed roles */
+var roles=["CSE Student","Aspiring AI Engineer","Independent Developer","Web App Builder","Chess Player"],r=0,c=0,del=false,t=$("#typed");
 function tick(){var w=roles[r];c+=del?-1:1;t.textContent=w.slice(0,c);var d=del?45:90;
 if(!del&&c===w.length){del=true;d=1400}else if(del&&c===0){del=false;r=(r+1)%roles.length;d=300}setTimeout(tick,d)}
 tick();
-var b=document.getElementById("board");
-for(var i=0;i<64;i++){var s=document.createElement("div");s.className=(i+Math.floor(i/8))%2?"s d":"s";b.insertBefore(s,b.lastChild)}
-function count(el){var n=+el.dataset.n,v=0,st=n/40;(function f(){v+=st;if(v>=n){el.textContent=n}else{el.textContent=Math.floor(v);requestAnimationFrame(f)}})()}
+
+/* counters and reveal */
+function count(el){var n=+el.dataset.n,v=0,st=Math.max(n/40,.1);el.dataset.done="1";(function f(){v+=st;if(v>=n){el.textContent=n}else{el.textContent=Math.floor(v);requestAnimationFrame(f)}})()}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");
-e.target.querySelectorAll("[data-n]").forEach(count);io.unobserve(e.target)}})},{threshold:.15});
-document.querySelectorAll(".reveal").forEach(function(x){io.observe(x)});
-document.getElementById("yr").textContent="\u00A9 "+new Date().getFullYear();
+$$("[data-n]",e.target).forEach(count);io.unobserve(e.target)}})},{threshold:.1});
+$$(".reveal").forEach(function(x){io.observe(x)});
+function setStat(id,val){var el=document.getElementById(id);if(!el||typeof val!=="number")return;el.dataset.n=val;if(el.dataset.done)el.textContent=val}
+
+/* nav highlight and progress */
+var linksBox=$("#links"),links=$$("#links a"),secs=links.map(function(a){return $(a.getAttribute("href"))});
+var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){var on=a.getAttribute("href")==="#"+e.target.id;a.classList.toggle("on",on);
+if(on&&linksBox.scrollWidth>linksBox.clientWidth){linksBox.scrollTo({left:a.offsetLeft-linksBox.clientWidth/2+a.offsetWidth/2,behavior:"smooth"})}})}})},{rootMargin:"-45% 0px -50% 0px"});
+secs.forEach(function(s){if(s)spy.observe(s)});
+var bar=$("#bar"),topBtn=$("#top-btn"),ring=$("#topRing");
+function onScroll(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight,p=m>0?Math.min(h.scrollTop/m,1):0;bar.style.width=(p*100)+"%";ring.style.strokeDashoffset=(1-p).toFixed(3);topBtn.classList.toggle("show",h.scrollTop>500)}
+addEventListener("scroll",onScroll,{passive:true});onScroll();
+topBtn.addEventListener("click",function(){scrollTo({top:0,behavior:"smooth"})});
+
+/* theme toggle */
+var root=document.documentElement;
+try{var sv=localStorage.getItem("theme");if(sv==="dark"||sv==="light")root.setAttribute("data-theme",sv)}catch(e){}
+$("#themeBtn").addEventListener("click",function(){
+var cur=root.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
+var nx=cur==="dark"?"light":"dark";root.setAttribute("data-theme",nx);
+try{localStorage.setItem("theme",nx)}catch(e){}});
+
+/* repo filter */
+$("#filters").addEventListener("click",function(e){var bt=e.target.closest("button");if(!bt)return;
+$$("#filters button").forEach(function(x){x.classList.toggle("on",x===bt)});
+var f=bt.dataset.f;$$("#repoGrid .repo").forEach(function(a){a.classList.toggle("hide",f!=="all"&&a.dataset.l!==f)})});
+
+/* copy email */
+var cm=$("#copyMail");
+cm.addEventListener("click",function(){var m="sarthakturkane81@gmail.com";
+function done(){cm.textContent="Copied";setTimeout(function(){cm.textContent="Copy email"},1600)}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(m).then(done,function(){location.href="mailto:"+m})}else{location.href="mailto:"+m}});
+
+/* knight's tour: a verified closed tour, every step is a legal L shaped move */
+var TOUR="17051301201200214061736577567567462706250416374557766472605271503110021433415374665462705132446342301123354726071534220324435536",P=[],files="abcdefgh";
+for(var i=0;i<64;i++)P.push([+TOUR.charAt(2*i),+TOUR.charAt(2*i+1)]);
+var boardEl=$("#board"),kn=$("#kn"),hop=$("#hop"),trail=$("#trail"),cstat=$("#cstat"),pauseBtn=$("#pauseBtn"),cbox=$("#cbox"),sqs=[];
+for(var y=0;y<8;y++)for(var x=0;x<8;x++){var d=document.createElement("div");d.className="sq"+((x+y)%2?" d":"");
+if(y===7){var f=document.createElement("i");f.className="f";f.textContent=files.charAt(x);d.appendChild(f)}
+if(x===0){var rk=document.createElement("i");rk.className="r";rk.textContent=8-y;d.appendChild(rk)}
+boardEl.appendChild(d);sqs.push(d)}
+function tf(p){return "translate("+p[0]*100+"%,"+p[1]*100+"%)"}
+function sq(p){return files.charAt(p[0])+(8-p[1])}
+var idx=0,done=0,seen=0,running=!reduce,onScreen=false,busy=false,DUR=900;
+function mark(p){var s=sqs[p[1]*8+p[0]];if(!s.classList.contains("v")){s.classList.add("v");seen++}}
+function say(txt){cstat.textContent=txt}
+kn.style.transform=tf(P[0]);mark(P[0]);
+if(reduce){pauseBtn.style.display="none";say("Knight on "+sq(P[0])+", motion reduced")}
+function canRun(){return running&&onScreen&&!document.hidden&&!reduce&&typeof kn.animate==="function"}
+function move(){
+if(busy||!canRun())return;busy=true;
+var a=P[idx],b=P[(idx+1)%64],longX=Math.abs(b[0]-a[0])===2,c=longX?[b[0],a[1]]:[a[0],b[1]];
+trail.setAttribute("d","M"+(a[0]+.5)+" "+(a[1]+.5)+"L"+(c[0]+.5)+" "+(c[1]+.5)+"L"+(b[0]+.5)+" "+(b[1]+.5));
+var ease="cubic-bezier(.5,.05,.25,1)";
+var an=kn.animate([{transform:tf(a),offset:0},{transform:tf(c),offset:2/3},{transform:tf(b),offset:1}],{duration:DUR,easing:ease,fill:"forwards"});
+hop.animate([{transform:"scale(1)"},{transform:"scale(1.32)",offset:.5},{transform:"scale(1)"}],{duration:DUR,easing:"ease-in-out"});
+var tot=DUR+500;
+trail.animate([{strokeDashoffset:1,opacity:.7,easing:ease},{strokeDashoffset:0,opacity:.7,offset:DUR/tot},{strokeDashoffset:0,opacity:0}],{duration:tot,easing:"linear"});
+an.finished.then(function(){
+kn.style.transform=tf(b);an.cancel();
+idx=(idx+1)%64;done++;
+if(idx===0){say("Tour complete, back on "+sq(b));setTimeout(function(){sqs.forEach(function(s){s.classList.remove("v")});seen=0;mark(P[0]);done=0;busy=false;kick()},1800);return}
+mark(b);say("Knight tour, move "+idx+" of 64 · N"+sq(b));
+busy=false;setTimeout(kick,120)
+}).catch(function(){busy=false});
+}
+function kick(){if(!busy&&canRun())move()}
+new IntersectionObserver(function(es){onScreen=es[0].isIntersecting;if(onScreen)kick()},{threshold:.25}).observe(cbox);
+document.addEventListener("visibilitychange",kick);
+pauseBtn.addEventListener("click",function(){running=!running;pauseBtn.textContent=running?"Pause":"Play";pauseBtn.setAttribute("aria-pressed",running?"false":"true");if(running)kick()});
+
+/* ELO and ratings: live values from Chess.com override the MY_ELO numbers above */
+var elo={rapid:MY_ELO.rapid,blitz:MY_ELO.blitz,bullet:MY_ELO.bullet,daily:MY_ELO.daily},rec={};
+var kinds=[["rapid","Rapid"],["blitz","Blitz"],["bullet","Bullet"],["daily","Daily"]];
+function renderElo(){
+var box=$("#cstats");$$(".cs.r",box).forEach(function(n){n.remove()});
+var vals=[];kinds.forEach(function(k){var v=elo[k[0]];if(typeof v==="number"){vals.push(v);
+var el=document.createElement("div");el.className="cs r";el.innerHTML="<small>"+k[1]+"</small><b>"+v+"</b>"+(rec[k[0]]?"<em>"+rec[k[0]]+"</em>":"");box.appendChild(el)}});
+if(vals.length){$("#eloNum").classList.remove("none");$("#eloNum").textContent=Math.max.apply(null,vals);$("#eloLbl").textContent="ELO on Chess.com, best time control"}
+}
+renderElo();
+function getJSON(u){return fetch(u,{headers:{Accept:"application/json"}}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})}
+function hasElo(){return kinds.some(function(k){return typeof elo[k[0]]==="number"})}
+function loadChess(){
+if(document.hidden)return;
+getJSON("https://api.chess.com/pub/player/sarthak_turkane/stats").then(function(d){
+var n=0;kinds.forEach(function(k){var o=d["chess_"+k[0]];if(o&&o.last&&o.last.rating){n++;elo[k[0]]=o.last.rating;if(o.record)rec[k[0]]=o.record.win+"W "+o.record.loss+"L "+o.record.draw+"D"}});
+renderElo();var l=$("#chLive");
+if(n){l.textContent="Chess.com ratings: live";l.classList.add("ok")}
+else if(!hasElo()){l.classList.remove("ok");l.textContent="No rated games found yet";$("#eloLbl").textContent="No rated games on Chess.com yet"}
+}).catch(function(){
+var l=$("#chLive");l.classList.remove("ok");
+l.textContent=hasElo()?"Couldn't reach Chess.com, showing saved ratings":"Couldn't reach Chess.com";
+if(!hasElo())$("#eloLbl").textContent="Open my Chess.com profile for the current rating"});
+}
+loadChess();setInterval(loadChess,120000);
+
+/* live GitHub stats, falls back to the saved snapshot */
+Promise.all([getJSON("https://api.github.com/users/SARTHAK-TURKANE-81"),getJSON("https://api.github.com/users/SARTHAK-TURKANE-81/repos?per_page=100")]).then(function(a){
+var u=a[0],rs=a[1].filter(function(x){return !x.fork});
+var st=0,fk=0;rs.forEach(function(x){st+=x.stargazers_count;fk+=x.forks_count});
+setStat("sRepos",u.public_repos);setStat("sFol",u.followers);setStat("sStars",st);setStat("sForks",fk);
+var l=$("#ghLive");l.textContent="GitHub stats: live";l.classList.add("ok")}).catch(function(){});
+
+$("#yr").textContent="© "+new Date().getFullYear();
 })();
 </script>
 </body>
