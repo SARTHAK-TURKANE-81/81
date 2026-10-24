@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sarthak Turkane | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF7F2;--card:#E8E0D5;--text:#292524;--muted:#78716C;--accent:#C76D45;--line:rgba(41,37,36,.14);--b1:#E8E0D5;--b2:#EFE8DD;--b3:#E3D8CA;--hdr:rgba(250,247,242,.88);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1917;--card:#292524;--text:#F5F0E8;--muted:#A8A29E;--accent:#D9825A;--line:rgba(245,240,232,.16);--b1:#292524;--b2:#33302d;--b3:#2a2623;--hdr:rgba(28,25,23,.88);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1c1917;--card:#292524;--text:#F5F0E8;--muted:#A8A29E;--accent:#D9825A;--line:rgba(245,240,232,.16);--b1:#292524;--b2:#33302d;--b3:#2a2623;--hdr:rgba(28,25,23,.88);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:border-box;margin:0}
+body{font-family:Poppins,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hdr);z-index:10}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.75;z-index:-1;animation:float 14s ease-in-out infinite}
+.blob.a{width:340px;height:340px;background:var(--b1);top:-60px;left:-80px}
+.blob.b{width:300px;height:300px;background:var(--b2);top:35%;right:-90px;animation-delay:-5s}
+.blob.c{width:320px;height:320px;background:var(--b3);bottom:-80px;left:20%;animation-delay:-9s}
+@keyframes float{50%{transform:translate(30px,-40px) scale(1.1)}}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--hdr);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{max-width:1000px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-weight:700;color:var(--text);text-decoration:none}
+.links{display:flex;gap:16px;overflow-x:auto}
+.links a{color:var(--muted);text-decoration:none;font-size:.88rem;white-space:nowrap;transition:.3s}
+.links a:hover{color:var(--accent)}
+section,.hero{max-width:1000px;margin:auto;padding:70px 20px 20px}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center;min-height:80vh}
+.tag{display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:30px;font-size:.8rem;color:var(--accent);background:var(--card);animation:pulse 3s infinite}
+@keyframes pulse{50%{box-shadow:0 6px 18px var(--b2)}}
+h1{font-size:clamp(2.1rem,6vw,3.5rem);line-height:1.15;margin:16px 0 8px}
+.grad{color:var(--text);background:linear-gradient(var(--accent),var(--accent)) no-repeat 0 92%/0 3px;animation:uline 1.2s .5s ease forwards}
+@keyframes shine{to{background-position:200% 0}}
+.role{font-size:1.2rem;color:var(--muted);min-height:2em}
+.role b{color:var(--accent);font-weight:600}
+.role i{display:inline-block;width:2px;height:1.1em;background:var(--accent);vertical-align:middle;margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.lead{margin:14px 0 24px;color:var(--muted);max-width:520px}
+.btn{display:inline-block;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:500;margin:0 10px 10px 0;transition:.3s;border:1px solid var(--accent)}
+.btn.p{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(199,109,69,.3)}
+.btn.s{color:var(--accent);background:var(--card)}
+.btn:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(199,109,69,.3)}
+.avatar{width:min(260px,70vw);aspect-ratio:1;margin:auto;border-radius:50%;overflow:hidden;border:4px solid var(--card);box-shadow:0 14px 40px rgba(41,37,36,.18);animation:bob 6s ease-in-out infinite}.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes bob{50%{transform:translateY(-14px)}}
+h2{font-size:1.7rem;margin-bottom:22px}
+h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;margin-top:6px;background:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;backdrop-filter:blur(10px);transition:.35s;box-shadow:0 6px 20px rgba(41,37,36,.08)}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 32px rgba(41,37,36,.14);border-color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card h3{margin-bottom:8px;font-size:1.1rem}
+.card p,.card li{color:var(--muted);font-size:.93rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.chip{padding:7px 15px;border-radius:30px;font-size:.84rem;background:var(--card);border:1px solid var(--line);color:var(--text);transition:.3s}
+.chip:hover{color:var(--text);box-shadow:0 6px 14px rgba(41,37,36,.14);transform:scale(1.07)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px;margin-top:22px}
+.stat{text-align:center;padding:18px 10px}
+.stat strong{display:block;font-size:2rem;color:var(--text)}
+.stat span{font-size:.82rem;color:var(--muted)}
+.feat ul{padding-left:18px;margin-top:10px}
+.feat li{margin-bottom:6px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px;font-size:.82rem}
+.flow span{padding:6px 12px;border-radius:12px;background:var(--b1);color:var(--text)}
+.flow em{color:var(--accent);font-style:normal;animation:nudge 1.6s infinite}
+@keyframes nudge{50%{transform:translateX(4px)}}
+.stage{perspective:650px;height:200px;margin:0 auto 10px;display:grid;place-items:center}.board{display:grid;grid-template-columns:repeat(8,1fr);width:150px;aspect-ratio:1;position:relative;background:var(--bg);border:3px solid var(--text);border-radius:6px;transform:rotateX(55deg) rotateZ(-40deg);transform-style:preserve-3d;box-shadow:6px 6px 0 rgba(41,37,36,.35),14px 18px 26px rgba(41,37,36,.22)}
+.s{background:var(--bg)}.s.d{background:var(--muted);opacity:.45}.dot{position:absolute;width:12.5%;height:12.5%;left:calc(var(--x)*12.5%);top:calc(var(--y)*12.5%);display:grid;place-items:center}.dot::after{content:"";width:42%;height:42%;border-radius:50%;background:var(--accent);animation:ping 2s ease-in-out infinite}@keyframes ping{50%{transform:scale(1.6);opacity:.45}}
+.knight{position:absolute;left:0;top:0;width:12.5%;height:12.5%;transform-style:preserve-3d;animation:route 9s ease-in-out infinite}.knight span{position:absolute;left:50%;bottom:25%;font-size:2.9rem;line-height:1;color:var(--text);font-family:"Segoe UI Symbol","Noto Sans Symbols 2","DejaVu Sans",serif;transform-origin:50% 100%;transform:translateX(-50%) rotateZ(40deg) rotateX(-55deg)}
+@keyframes route{0%,18%{transform:translate(100%,700%)}25%,43%{transform:translate(200%,500%)}50%,68%{transform:translate(400%,400%)}75%,93%{transform:translate(300%,600%)}100%{transform:translate(100%,700%)}}
+.repo{display:block;text-decoration:none;color:inherit}.repo h3{color:var(--text);word-break:break-word}.lang{display:inline-block;margin-top:10px;padding:3px 12px;border-radius:20px;font-size:.75rem;border:1px solid var(--line);color:var(--text);background:var(--b1)}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+footer{text-align:center;padding:50px 20px 30px;color:var(--muted);font-size:.85rem}
+@media (max-width:760px){.hero{grid-template-columns:1fr;text-align:center;min-height:auto;padding-top:40px}.hero p.lead{margin-inline:auto}.avatar{order:-1;font-size:3rem}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+.chip,.card .card,.lang,.flow span{background:var(--bg)}.repo:hover h3{color:var(--accent)}@keyframes uline{to{background-size:100% 3px}}a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:22px 0}.ci{display:block;padding:16px 18px;border-radius:16px;background:var(--bg);border:1px solid var(--line);text-decoration:none;color:var(--text);transition:.3s;overflow-wrap:anywhere}.ci small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}.ci span{font-weight:500}.ci:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-3px)}
+@media (min-width:1100px){section,.hero,nav{max-width:1120px}.hero{gap:60px}h1{font-size:4rem}.avatar{width:320px}}
+@media (max-width:480px){section,.hero{padding-left:16px;padding-right:16px}.card{padding:18px}.btn{padding:11px 20px}.stage{height:180px}h2{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="blob a"></div><div class="blob b"></div><div class="blob c"></div>
+<header><nav><a class="logo" href="#top">Sarthak</a>
+<div class="links"><a href="#about">About</a><a href="#project">Project</a><a href="#repos">Repos</a><a href="#lead">Leadership</a><a href="#contact">Contact</a></div></nav></header>
+
+<main id="top">
+<div class="hero">
+<div>
+<span class="tag">Open to opportunities</span>
+<h1>Hi, I’m <span class="grad">Sarthak Turkane</span></h1>
+<div class="role"><b id="typed"></b><i></i></div>
+<p class="lead">CSE student at Sanjivani University who loves building web apps and intelligent tools, with the goal of becoming a software developer.</p>
+<a class="btn p" href="#project">View my work</a><a class="btn s" href="#contact">Get in touch</a>
+</div>
+<div class="avatar"><img src="data:image/webp;base64,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" alt="Portrait of Sarthak Turkane" width="260" height="260"></div>
+</div>
+
+<section id="about" class="reveal">
+<h2>About me</h2>
+<div class="card">
+<p>I am Sarthak Aarti Suresh Turkane, a Computer Science and Engineering student at Sanjivani University in Maharashtra, India. I enjoy turning ideas into working web apps and browser tools, and I am especially curious about AI, automation and software that solves real problems.</p>
+<div class="chips">
+<span class="chip">JavaScript</span><span class="chip">HTML and CSS</span><span class="chip">Web Apps</span><span class="chip">Chrome Extensions (MV3)</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">C</span><span class="chip">Explainable AI</span><span class="chip">LLM APIs</span><span class="chip">REST APIs</span><span class="chip">Git and GitHub</span><span class="chip">Team Leadership</span>
+</div>
+<div class="stats">
+<div class="card stat"><strong data-n="17">0</strong><span>Repositories</span></div>
+<div class="card stat"><strong data-n="85">0</strong><span>Commits on Lens⁸¹</span></div>
+<div class="card stat"><strong data-n="9">0</strong><span>Stars</span></div>
+<div class="card stat"><strong data-n="6">0</strong><span>Forks</span></div>
+</div>
+</div>
+</section>
+
+<section id="project" class="reveal">
+<h2>Featured project</h2>
+<div class="card feat">
+<h3>Lens⁸¹ Smart Extension</h3>
+<p>A Chrome Manifest V3 extension that tells you whether a Google Scholar result is a Research Paper or a Review Paper, and turns any highlighted text into a formatted citation, without leaving the page. Everything runs client side, with no server and no hosted database.</p>
+<ul>
+<li>Research and Review badges with an ensemble of up to 5 AI models (OpenRouter, Google Gemini, xAI Grok)</li>
+<li>Local Collections with export to CSV, XLSX, JSON, BibTeX, Markdown and CSL</li>
+<li>Citation Finder that searches Crossref, Semantic Scholar and OpenAlex in parallel</li>
+<li>Offline citation formatting with citeproc-js, plus a passcode gate on settings</li>
+<li>Six versions shipped, built with a team of four</li>
+</ul>
+<div class="flow"><span>Scholar page</span><em>→</em><span>Content script</span><em>→</em><span>Service worker</span><em>→</em><span>APIs and storage</span></div>
+<div class="chips" style="margin-top:20px">
+<a class="btn p" style="margin:0" href="https://github.com/SARTHAK-TURKANE-81/Lens81_Smart_Extension" target="_blank" rel="noopener">View on GitHub</a>
+<a class="btn s" style="margin:0" href="https://youtu.be/I_N_ybBbkhQ" target="_blank" rel="noopener">Watch demo</a>
+</div>
+</div>
+</section>
+
+<section id="repos" class="reveal">
+<h2>More from GitHub</h2>
+<div class="grid">
+<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/TL_Intern_Sarthak_Turkane" target="_blank" rel="noopener"><h3>TL_Intern_Sarthak_Turkane</h3><p>Summer Internship Program 2026 at Tinkerers’ Lab, Sanjivani University. A 4-week progress tracker documenting daily learning, project development and experiments.</p><span class="lang">HTML</span></a>
+<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/GI-Vision" target="_blank" rel="noopener"><h3>GI-Vision</h3><p>Explainable AI for four-class gastrointestinal endoscopy image classification using ResNet-18 and Grad-CAM.</p><span class="lang">Python</span></a>
+<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/SP-Chess-Project" target="_blank" rel="noopener"><h3>SP-Chess-Project</h3><p>A chess focused project that blends my favourite hobby with programming.</p><span class="lang">Python</span></a>
+<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/CHESS_GLASSES" target="_blank" rel="noopener"><h3>CHESS_GLASSES</h3><p>Another chess experiment built in Python.</p><span class="lang">Python</span></a>
+<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/knowledge-container-ai" target="_blank" rel="noopener"><h3>knowledge-container-ai</h3><p>An AI powered knowledge project built with TypeScript.</p><span class="lang">TypeScript</span></a>
+<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/STUDENT-EXIBIT" target="_blank" rel="noopener"><h3>STUDENT-EXIBIT</h3><p>A student showcase platform, built by me for us.</p><span class="lang">TypeScript</span></a>
+<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/SIH26" target="_blank" rel="noopener"><h3>SIH26</h3><p>My Smart India Hackathon 2026 project work.</p><span class="lang">JavaScript</span></a>
+<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/green-sentinel-tracker" target="_blank" rel="noopener"><h3>green-sentinel-tracker</h3><p>ADP project for division B.</p><span class="lang">Project</span></a>
+<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/ky-mira-backend" target="_blank" rel="noopener"><h3>ky-mira-backend</h3><p>The backend of one of my projects.</p><span class="lang">Python</span></a>
+<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/TEXT-TO-HANDWRITING" target="_blank" rel="noopener"><h3>TEXT-TO-HANDWRITING</h3><p>Converts typed text into a handwritten style.</p><span class="lang">HTML</span></a>
+<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/CONNECT" target="_blank" rel="noopener"><h3>CONNECT</h3><p>A web app built with HTML, CSS and JavaScript.</p><span class="lang">HTML</span></a>
+<a class="card repo" href="https://github.com/SARTHAK-TURKANE-81/os-tutorial" target="_blank" rel="noopener"><h3>os-tutorial</h3><p>A fork exploring how to create an operating system from scratch.</p><span class="lang">C</span></a>
+</div>
+<p style="margin-top:20px"><a class="btn s" style="margin:0" href="https://github.com/SARTHAK-TURKANE-81?tab=repositories" target="_blank" rel="noopener">See all 17 repositories</a></p>
+</section>
+
+<section id="lead" class="reveal">
+<h2>Leadership and hobbies</h2>
+<div class="grid">
+<div class="card"><h3>President, SIBSA</h3><p>I lead SIBSA, the College Department Committee at Sanjivani University, coordinating members and activities and growing a student community.</p></div>
+<div class="card"><h3>Chess</h3><div class="stage"><div class="board" id="board"><i class="dot" style="--x:2;--y:5"></i><i class="dot" style="--x:4;--y:4"></i><i class="dot" style="--x:3;--y:6"></i><div class="knight"><span>&#9822;&#xFE0E;</span></div></div></div><p>Chess sharpens my planning and patience, the same habits I bring to debugging and designing software. It also shows up in my code, with projects like SP-Chess-Project and CHESS_GLASSES.</p></div>
+<div class="card"><h3>Goal</h3><p>To grow into a software developer who builds useful, polished products, and to keep exploring AI engineering along the way.</p></div>
+</div>
+</section>
+
+<section id="contact" class="reveal">
+<h2>Let’s connect</h2>
+<div class="card">
+<p style="text-align:center">Interested in collaborating or just want to say hello? Find me here.</p>
+<div class="contact-grid">
+<a class="ci" href="mailto:sarthakturkane81@gmail.com"><small>Email</small><span>sarthakturkane81@gmail.com</span></a>
+<a class="ci" href="tel:+917276180081"><small>Phone</small><span>+91 7276180081</span></a>
+</div>
+<div class="chips" style="justify-content:center">
+<a class="btn p" style="margin:0" href="mailto:sarthakturkane81@gmail.com">Email me</a>
+<a class="btn s" style="margin:0" href="https://github.com/SARTHAK-TURKANE-81" target="_blank" rel="noopener">GitHub</a>
+<a class="btn s" style="margin:0" href="https://www.linkedin.com/in/sarthak-turkane" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+</div>
+</section>
+</main>
+<footer>Designed and built by Sarthak Turkane <span id="yr"></span></footer>
+
+<script>
+(function(){
+var roles=["CSE Student","Aspiring Software Developer","Web App Builder","AI Enthusiast","Chess Player"],r=0,c=0,del=false,t=document.getElementById("typed");
+function tick(){var w=roles[r];c+=del?-1:1;t.textContent=w.slice(0,c);var d=del?45:90;
+if(!del&&c===w.length){del=true;d=1400}else if(del&&c===0){del=false;r=(r+1)%roles.length;d=300}setTimeout(tick,d)}
+tick();
+var b=document.getElementById("board");
+for(var i=0;i<64;i++){var s=document.createElement("div");s.className=(i+Math.floor(i/8))%2?"s d":"s";b.insertBefore(s,b.lastChild)}
+function count(el){var n=+el.dataset.n,v=0,st=n/40;(function f(){v+=st;if(v>=n){el.textContent=n}else{el.textContent=Math.floor(v);requestAnimationFrame(f)}})()}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");
+e.target.querySelectorAll("[data-n]").forEach(count);io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll(".reveal").forEach(function(x){io.observe(x)});
+document.getElementById("yr").textContent="\u00A9 "+new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
